@@ -1,10 +1,14 @@
 package pl.michalgellert.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pl.michalgellert.services.ExchangeService;
 
+import java.util.Collection;
 import java.util.Currency;
 
 /**
@@ -13,6 +17,23 @@ import java.util.Currency;
 @RestController
 @RequestMapping("/exchange")
 public class ExchangeController {
+
+    @Autowired
+    private ExchangeService exchangeService;
+
+    @Autowired
+    private Collection<ExchangeService> services;
+
+//    @Qualifier("cute")
+    @RequestMapping("/getExchange")
+    public String getExchange() {
+        String ourExchange = "";
+        for (ExchangeService exchangeService : services) {
+            ourExchange += exchangeService.getExchange();
+        }
+//        return exchangeService.getExchange();
+        return ourExchange;
+    }
 
     @RequestMapping("/{number}")
     public Integer multiplyBy2(@PathVariable Integer number) {
