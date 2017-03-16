@@ -3,7 +3,6 @@ package pl.michalgellert;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
@@ -16,9 +15,9 @@ public class PgsWorkshopApplication {
         SpringApplication.run(PgsWorkshopApplication.class, args);
         log.print("log");
     }
-
-    @Bean
-    String getWeatherType() {
-        return "weatherType";
-    }
+//
+//    @Bean
+//    String getWeatherType() {
+//        return "weatherType";
+//    }
 }

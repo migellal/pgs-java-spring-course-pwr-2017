@@ -1,8 +1,7 @@
-package pl.michalgellert.services.impl;
+package pl.michalgellert.service.impl;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import pl.michalgellert.services.ExchangeService;
+import pl.michalgellert.service.ExchangeService;
 
 /**
  * Created by micha on 14.03.2017.

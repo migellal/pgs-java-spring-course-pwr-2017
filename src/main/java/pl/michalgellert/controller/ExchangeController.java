@@ -1,13 +1,11 @@
-package pl.michalgellert.controllers;
+package pl.michalgellert.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pl.michalgellert.services.ExchangeService;
+import pl.michalgellert.service.ExchangeService;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -41,7 +39,7 @@ public class ExchangeController {
 //    @RequestMapping("/allExchanges")
 //    public ResponseEntity<List<String>> allExchangesResponse() {
 //        List<String> result = new ArrayList<>();
-//        services.forEach(((x)->result.add(x.getExchange())));
+//        service.forEach(((x)->result.add(x.getExchange())));
 //        return new ResponseEntity<List<String>>(result, HttpStatus.OK);
 //    }
 

@@ -1,4 +1,4 @@
-package pl.michalgellert.services;
+package pl.michalgellert.service;
 
 /**
  * Created by micha on 14.03.2017.

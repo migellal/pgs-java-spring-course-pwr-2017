@@ -1,4 +1,4 @@
-package pl.michalgellert.controllers;
+package pl.michalgellert.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
