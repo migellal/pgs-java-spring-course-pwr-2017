@@ -16,10 +16,10 @@ public class NewExchangeController {
     @Autowired
     private OpenWeatherClient openWeatherClient;
 
-    @RequestMapping("weatherclient")
-    private String weatherClient() {
-        return openWeatherClient.getExchange();
-    }
+//    @RequestMapping("weatherclient")
+//    private String weatherClient() {
+//        return openWeatherClient.getExchange();
+//    }
 
     @RequestMapping("/hello")
     private String hello() {

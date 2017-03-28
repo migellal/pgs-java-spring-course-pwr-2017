@@ -16,12 +16,12 @@ public class OpenWeatherClient {
 
     String url = "http://api.fixer.io/latest?symbols=USD,GBP";
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Bean
-    public String getExchange() {
-        Map<String, Object> response = restTemplate.getForObject(url, HashMap.class);
-        return response.toString();
-    }
+//    @Autowired
+//    private RestTemplate restTemplate;
+//
+//    @Bean
+//    public String getExchange() {
+//        Map<String, Object> response = restTemplate.getForObject(url, HashMap.class);
+//        return response.toString();
+//    }
 }

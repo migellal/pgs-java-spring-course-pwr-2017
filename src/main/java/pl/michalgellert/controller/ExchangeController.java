@@ -25,14 +25,14 @@ public class ExchangeController {
     @Autowired
     private Collection<ExchangeService> services;
 
-    @Autowired
-    private String string;
+//    @Autowired
+//    private String string;
 
     @RequestMapping("/allExchanges")
     public List<String> allExchanges() {
         List<String> result = new ArrayList<>();
         services.forEach(((x)->result.add(x.getExchange())));
-        result.add(string);
+//        result.add(string);
         return result;
     }
 
